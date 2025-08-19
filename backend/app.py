@@ -9,9 +9,9 @@ import faiss
 # ---- (copy your ESCO semantic roadmap logic here, but as a single function) ----
 # Assume these files live in ../esco_data/
 
-occupations_df = pd.read_csv('/content/esco_data/occupations_en.csv')
-skills_df = pd.read_csv('/content/esco_data/skills_en.csv')
-occ_skill_rel_df = pd.read_csv('/content/esco_data/occupationSkillRelations_en.csv')
+occupations_df = pd.read_csv('Dream AI/esco_data/occupations_en.csv')
+skills_df = pd.read_csv('Dream AI/esco_data/skills_en.csv')
+occ_skill_rel_df = pd.read_csv('Dream AI/esco_data/occupationSkillRelations_en.csv')
 for df in (occupations_df, skills_df, occ_skill_rel_df): df.columns = df.columns.str.strip()
 
 occupations_df['text'] = occupations_df['preferredLabel'].fillna('') + '. ' + occupations_df['description'].fillna('')
